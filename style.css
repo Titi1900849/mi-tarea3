@@ -1,0 +1,56 @@
+/* Estilos generales y tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Espaciado para el banner del carrusel */
+.banner-slide {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos personalizados para las tarjetas */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* ==========================================================
+   CSS3 MEDIA QUERIES 
+   ========================================================== */
+
+/* Dispositivos móviles pequeños (Ancho menor o igual a 576px) */
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+    .banner-slide {
+        min-height: 160px;
+        padding: 2rem !important;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablets y dispositivos medianos (Entre 577px y 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    main {
+        padding-top: 2rem;
+    }
+}
+
+/* Escritorio / Desktop (Ancho mayor a 992px) */
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+}

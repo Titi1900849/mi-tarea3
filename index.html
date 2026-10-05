@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 - Diseño Web Responsivo y Bootstrap 5</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos CSS personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header y Navegación Principal -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">UTN - Diseño Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#teoria-responsivo">Viewport & Queries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#teoria-bootstrap">Bootstrap 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container my-5 pt-4">
+        
+        <!-- Carrusel de Imágenes (Componente Bootstrap 5) -->
+        <div id="carouselExampleIndicators" class="carousel slide mb-5 shadow rounded overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="p-5 text-center bg-primary text-white banner-slide">
+                        <h2>Diseño Web Responsivo</h2>
+                        <p class="lead">Adaptabilidad fluida para cualquier resolución de pantalla.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="p-5 text-center bg-success text-white banner-slide">
+                        <h2>Bootstrap 5 Framework</h2>
+                        <p class="lead">Componentes prediseñados y sistema de rejilla eficiente.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <div class="row">
+            <!-- Sección Principal / Main (Artículos) -->
+            <section class="col-lg-8 col-md-7 mb-4">
+                <article class="card mb-4 shadow-sm border-0">
+                    <div class="card-body">
+                        <h2 class="card-title h4 text-primary" id="teoria-responsivo">1. Diseño Web Responsivo y Viewport</h2>
+                        <p class="card-text">
+                            El diseño web responsivo (RWD) es una filosofía de diseño que propone que el desarrollo y el diseño de un sitio web deben responder al comportamiento del usuario y al entorno (tamaño de pantalla, orientación y plataforma). 
+                        </p>
+                        <p class="card-text">
+                            El componente crítico para lograrlo en dispositivos móviles es la etiqueta <strong>Viewport</strong>:
+                        </p>
+                        <pre class="bg-light p-3 rounded"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                        <p class="card-text">
+                            Esto le indica al navegador que ajuste la anchura de la página a la anchura de la pantalla del dispositivo de forma proporcional.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h2 class="card-title h4 text-primary" id="teoria-bootstrap">2. Componentes Esenciales de Bootstrap 5</h2>
+                        <p class="card-text">Bootstrap 5 facilita la creación de interfaces modernas gracias a:</p>
+                        <ul>
+                            <li><strong>Containers:</strong> Elementos de diseño básicos que contienen, centran y alinean el contenido dentro de un dispositivo.</li>
+                            <li><strong>Grid System:</strong> Sistema de filas (<code>.row</code>) y columnas basado en Flexbox que divide el ancho de la pantalla en una cuadrícula de 12 unidades.</li>
+                            <li><strong>Flexbox Utilities:</strong> Clases de utilidad para alinear, centrar y distribuir elementos con flexibilidad.</li>
+                            <li><strong>Navbar & Carousel:</strong> Componentes interactivos listos para usarse y adaptarse de forma automática en móviles y escritorio.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Barra Lateral / Aside -->
+            <aside class="col-lg-4 col-md-5 mb-4">
+                <div class="p-4 bg-light border-0 shadow-sm rounded">
+                    <h3 class="h5 text-secondary">Información del Curso</h3>
+                    <hr>
+                    <p class="small text-muted mb-2"><strong>Universidad:</strong> Técnica Nacional (UTN)</p>
+                    <p class="small text-muted mb-2"><strong>Carrera:</strong> Ingeniería del Software</p>
+                    <p class="small text-muted mb-2"><strong>Curso:</strong> ISW-512 Diseño de Aplicaciones Web</p>
+                    <p class="small text-muted mb-4"><strong>Estudiante:</strong> Valerie Gamboa Castro</p>
+                    <p class="small text-muted mb-4"><strong>Profesor:</strong> Sergio González Salazar</p>
+                    <div class="d-grid">
+                        <a href="#teoria-responsivo" class="btn btn-outline-dark btn-sm">Ver Temas</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-1">Universidad Técnica Nacional © 2026 - Tarea 3</p>
+            <p class="small text-muted mb-0">Desarrollado bajo principios de Diseño Web Responsivo y Bootstrap 5</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
